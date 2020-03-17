@@ -13,7 +13,7 @@
         "app_id": "N5SDYMQ8JI",
         "api_key_search_only": "9110567d54770dbedfdb75f52e027957",
         "index_name": "BGG",
-        "hits_per_page": 24,
+        "hits_per_page": 48,
         "sort_by": "asc(name)"
     }
 }
