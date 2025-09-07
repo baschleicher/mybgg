@@ -117,6 +117,11 @@ body {
         .ais-SearchBox-resetIcon {
             fill: #bfc7d8;
         }
+		
+.content-left {
+  border-right: 10px solid #000000; /* Adds a vertical line to the right of this div */
+  padding-right: 20px; /* Add some spacing */
+}
 
 .stats {
     display: inline-block;
