@@ -1,3 +1,4 @@
 *.sqlite
 __pycache__
 /open_local.bat
+token.txt

@@ -10,6 +10,11 @@ logger = logging.getLogger(__name__)
 
 class BGGClient:
     BASE_URL = "https://www.boardgamegeek.com/xmlapi2"
+    
+    bearer_token = "3a85fc54-40fd-4c45-b73f-e6475a2955e8"
+    headers = {
+        "Authorization": f"Bearer {bearer_token}",
+    }
 
     def __init__(self, cache=None, debug=False):
         if not cache:
@@ -47,7 +52,7 @@ class BGGClient:
     def _make_request(self, url, params={}, tries=0):
 
         try:
-            response = self.requester.get(BGGClient.BASE_URL + url, params=params)
+            response = self.requester.get(BGGClient.BASE_URL + url, params=params, headers=BGGClient.headers)
         except requests.exceptions.ConnectionError:
             if tries < 3:
                 time.sleep(2)
